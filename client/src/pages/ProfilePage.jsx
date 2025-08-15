@@ -41,10 +41,10 @@ const ProfilePage = () => {
             upload profile image
           </label>
           <input onChange={(e)=>setName(e.target.value)} value={name}
-           type="text" required placeholder='Your name' className='p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-violet-500'/>
-           <textarea onChange={(e)=>setBio(e.target.value)} value={bio} placeholder="Write profile bio" required className="p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-violet-500" rows={4}></textarea>
+           type="text" required placeholder='Your name' className='p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500'/>
+           <textarea onChange={(e)=>setBio(e.target.value)} value={bio} placeholder="What's on your heart right now?" required className="p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" rows={4}></textarea>
 
-           <button type="submit" className="bg-gradient-to-r from-purple-400 to-violet-600 text-white p-2 rounded-full text-lg cursor-pointer">Save</button>
+           <button type="submit" className="bg-gradient-to-r from-green-300 to-green-500 text-black p-2 rounded-full text-lg cursor-pointer">Save</button>
         </form>
         <img className={`max-w-44 aspect-square rounded-full mx-10 max-sm:mt-10 ${selectedImg && 'rounded-full'}`} src={authUser?.profilePic || assets.logo_icon} alt="" />
       </div>

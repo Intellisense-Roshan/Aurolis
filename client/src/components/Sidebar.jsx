@@ -22,7 +22,7 @@ const Sidebar = () => {
     },[onlineUsers])
 
   return (
-    <div className={`bg-[#8185B2]/10 h-full p-5 rounded-r-xl overflow-y-scroll text-white ${selectedUser ? "max-md:hidden" : ''}`}>
+    <div className={`bg-[#8185B2]/10 h-full p-5 rounded-r-xl overflow-y-scroll text-green-500 ${selectedUser ? "max-md:hidden" : ''}`}>
       <div className='pb-5'>
         <div className='flex justify-between items-center'>
             <img src={assets.logo} alt="logo" className='max-w-40' />
@@ -52,11 +52,11 @@ const Sidebar = () => {
                     <p>{user.fullName}</p>
                     {
                         onlineUsers.includes(user._id)
-                        ? <span className='text-green-400 text-xs'>Online</span>
-                        : <span className='text-neutral-400 text-xs'>Offline</span>
+                        ? <span className='text-red-600 text-xs'>Online</span>
+                        : <span className='text-white text-xs'>Offline</span>
                     }
                 </div>
-                {unseenMessages[user._id] > 0 && <p className='absolute top-4 right-4 text-xs h-5 w-5 flex justify-center items-center rounded-full bg-violet-500/50'>{unseenMessages[user._id]}</p>}
+                {unseenMessages[user._id] > 0 && <p className='absolute top-4 right-4 text-xs h-5 w-5 flex justify-center items-center rounded-full bg-green-500/50'>{unseenMessages[user._id]}</p>}
             </div>
         ) )}
     </div>
